@@ -3,16 +3,16 @@ package model;
 import java.util.ArrayList;
 
 public class Model {
-    String Text;
+    private String text;
     public Model() {
     }
 
     public String getText() {
-        return Text;
+        return text;
     }
 
     public void setText(String input) {
-        Text = input;
+        text = input;
         notifyObservers();
     }
 
@@ -24,7 +24,7 @@ public class Model {
         }
     }
     public void addTextChangeObserver(TextChangeObserver observer) {
-        if (!observers.contains(observers))
+        if (!observers.contains(observer))
             observers.add(observer);
     }
     public void removeTextChangeObserver(TextChangeObserver observer) {
